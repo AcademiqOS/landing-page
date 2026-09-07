@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AcademiqOS - Data Sovereignty Framework for Modern Education</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        darkbg: '#0a0f1d',
+                        cardbg: '#111827',
+                        cardborder: '#1e293b',
+                        accent: '#0ea5e9'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-darkbg text-slate-100 min-h-screen font-sans selection:bg-accent selection:text-white antialiased">
+
+    <nav class="border-b border-slate-800 bg-darkbg/90 backdrop-blur sticky top-0 z-40">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <!-- Logo Slot: Drop your logo asset later into images/logo.[png/svg] -->
+                <div class="w-10 h-10 rounded-xl flex items-center justify-center font-black text-white text-lg overflow-hidden">
+                    <img src="images/logo.png" alt="AcademiqOS Logo" class="w-10 h-10" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="w-full h-full bg-gradient-to-tr from-blue-600 to-teal-400 items-center justify-center font-black text-white text-lg hidden">A</div>
+                </div>
+                <div>
+                    <span class="text-xl font-bold tracking-tight">Academiq<span class="text-accent">OS</span></span>
+                    <span class="block text-[10px] text-slate-400 uppercase tracking-widest font-mono">Enterprise Core</span>
+                </div>
+            </div>
+            <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
+                <a href="#vision" class="hover:text-accent transition">Vision</a>
+                <a href="#architecture" class="hover:text-accent transition">Architecture</a>
+                <a href="#licensing" class="hover:text-accent transition">Licensing</a>
+                <a href="#roadmap" class="hover:text-accent transition">Roadmap</a>
+            </div>
+            <div>
+                <button onclick="openModal()" class="bg-accent hover:bg-sky-400 text-slate-950 font-semibold px-5 py-2.5 rounded-xl text-sm transition shadow-lg shadow-sky-500/20 active:scale-95">
+                    Request Access
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="max-w-6xl mx-auto px-6 pt-28 pb-20 text-center">
+        <div class="inline-flex items-center space-x-2 mb-6 px-4 py-1.5 rounded-full bg-slate-900 border border-slate-800 text-xs text-sky-400 font-mono shadow-inner">
+            <span class="w-2 h-2 rounded-full bg-sky-400 animate-pulse"></span>
+            <span>Phase 0.5: Brand Genesis & Public Surface</span>
+        </div>
+        <h1 class="text-5xl md:text-7xl font-black tracking-tight mb-8 leading-[1.1]">
+            Absolute Data Sovereignty for <span class="bg-gradient-to-r from-sky-400 via-teal-300 to-blue-500 bg-clip-text text-transparent">Modern Institutions</span>
+        </h1>
+        <p class="text-slate-400 text-lg md:text-xl max-w-3xl mx-auto mb-12 leading-relaxed">
+            A lightweight, self-hosted operating system bridging enterprise campus administration and digital classrooms. Run your institution entirely on your own local hardware with zero vendor cloud lock-in.
+        </p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <button onclick="openModal()" class="bg-accent hover:bg-sky-400 text-slate-950 font-bold px-8 py-4 rounded-2xl transition shadow-xl shadow-sky-500/20 text-base">
+                Deploy AcademiqOS
+            </button>
+            <a href="#architecture" class="bg-slate-900 hover:bg-slate-800 text-slate-200 font-semibold px-8 py-4 rounded-2xl transition border border-slate-800 text-base flex items-center justify-center">
+                Explore Core Engine
+            </a>
+        </div>
+    </header>
+
+    <section id="vision" class="max-w-7xl mx-auto px-6 py-24 border-t border-slate-800/60">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-6">Why AcademiqOS? Beyond Centralized Cloud Lock-In.</h2>
+                <p class="text-slate-400 leading-relaxed mb-6">
+                    Traditional commercial cloud SaaS systems (like standard web platforms) force schools to surrender student data, pay perpetual rent on external servers, and suffer under sluggish legacy architectures. 
+                </p>
+                <p class="text-slate-400 leading-relaxed mb-8">
+                    AcademiqOS flips this model entirely. Inspired by the <strong>GitHub Enterprise</strong> paradigm, you license our high-performance core engine and host it securely inside your own campus perimeter or chosen local hardware.
+                </p>
+                <div class="grid grid-cols-2 gap-6 font-mono text-sm">
+                    <div class="bg-cardbg p-4 rounded-xl border border-slate-800">
+                        <div class="text-accent text-2xl font-bold mb-1">100%</div>
+                        <div class="text-slate-400 text-xs">Local Data Control</div>
+                    </div>
+                    <div class="bg-cardbg p-4 rounded-xl border border-slate-800">
+                        <div class="text-teal-400 text-2xl font-bold mb-1">Zero</div>
+                        <div class="text-slate-400 text-xs">Third-Party Cloud Trackers</div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-cardbg border border-slate-800 p-8 rounded-3xl relative overflow-hidden shadow-2xl">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-accent/5 rounded-full blur-3xl pointer-events-none"></div>
+                <h3 class="text-xl font-bold mb-6 flex items-center space-x-2">
+                    <span class="w-3 h-3 rounded-full bg-accent"></span>
+                    <span>The Self-Hosted Campus Advantage</span>
+                </h3>
+                <ul class="space-y-4 text-slate-300 text-sm">
+                    <li class="flex items-start space-x-3">
+                        <svg class="w-5 h-5 text-accent shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span>Embedded SQLite & PocketBase core executable requiring negligible maintenance overhead.</span>
+                    </li>
+                    <li class="flex items-start space-x-3">
+                        <svg class="w-5 h-5 text-accent shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span>Deployable on spare local campus PC hardware, internal minicomputers, or private local networks.</span>
+                    </li>
+                    <li class="flex items-start space-x-3">
+                        <svg class="w-5 h-5 text-accent shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                        <span>Predictable B2B enterprise licensing model tailored for school boards and independent campuses.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="architecture" class="max-w-7xl mx-auto px-6 py-24 border-t border-slate-800/60">
+        <div class="text-center max-w-3xl mx-auto mb-20">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Engineered for Absolute Control</h2>
+            <p class="text-slate-400 text-lg">Everything your school administration and classrooms need, compiled into a unified operating framework.</p>
+        </div>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-cardbg p-8 rounded-3xl border border-slate-800 hover:border-slate-700 transition">
+                <div class="w-12 h-12 rounded-2xl bg-sky-500/10 text-accent flex items-center justify-center font-bold text-lg mb-6">01</div>
+                <h3 class="text-xl font-semibold mb-3">Sovereign Database</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">Run your school's database and business rules locally on campus hardware. Complete protection of student records and staff data.</p>
+            </div>
+            <div class="bg-cardbg p-8 rounded-3xl border border-slate-800 hover:border-slate-700 transition">
+                <div class="w-12 h-12 rounded-2xl bg-sky-500/10 text-accent flex items-center justify-center font-bold text-lg mb-6">02</div>
+                <h3 class="text-xl font-semibold mb-3">Unified Campus UI</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">Seamlessly merge fee ledgers, automated attendance trackers, and interactive student learning modules into a lightning-fast interface.</p>
+            </div>
+            <div class="bg-cardbg p-8 rounded-3xl border border-slate-800 hover:border-slate-700 transition">
+                <div class="w-12 h-12 rounded-2xl bg-sky-500/10 text-accent flex items-center justify-center font-bold text-lg mb-6">03</div>
+                <h3 class="text-xl font-semibold mb-3">Zero-Cost Matrix Alerts</h3>
+                <p class="text-slate-400 text-sm leading-relaxed">Integrated communication layers utilizing self-hosted protocols to broadcast attendance alerts and fee reminders without expensive third-party messaging APIs.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="licensing" class="max-w-7xl mx-auto px-6 py-24 border-t border-slate-800/60">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Enterprise Licensing Paradigm</h2>
+            <p class="text-slate-400 text-lg">Modeled after GitHub Enterprise: transparent pricing, absolute ownership of data.</p>
+        </div>
+        <div class="max-w-md mx-auto bg-cardbg border-2 border-accent/40 p-8 rounded-3xl shadow-2xl relative">
+            <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-accent text-slate-950 font-bold text-xs uppercase tracking-widest px-3 py-1 rounded-full">
+                Campus Enterprise
+            </div>
+            <div class="text-center mb-8 pt-4">
+                <h3 class="text-2xl font-bold mb-2">On-Premise License</h3>
+                <p class="text-slate-400 text-sm">For independent schools and multi-campus districts.</p>
+                <div class="mt-6 text-4xl font-black text-slate-100">Custom <span class="text-xs font-normal text-slate-400 font-mono">/ institution / mo</span></div>
+            </div>
+            <ul class="space-y-4 text-sm text-slate-300 mb-8">
+                <li class="flex items-center space-x-3">
+                    <svg class="w-5 h-5 text-accent shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    <span>Self-hosted container binaries</span>
+                </li>
+                <li class="flex items-center space-x-3">
+                    <svg class="w-5 h-5 text-accent shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    <span>Unlimited student & faculty seats</span>
+                </li>
+                <li class="flex items-center space-x-3">
+                    <svg class="w-5 h-5 text-accent shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    <span>Direct priority engineering support</span>
+                </li>
+                <li class="flex items-center space-x-3">
+                    <svg class="w-5 h-5 text-accent shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    <span>Complete database ownership & exports</span>
+                </li>
+            </ul>
+            <button onclick="openModal()" class="w-full bg-accent hover:bg-sky-400 text-slate-950 font-bold py-3.5 rounded-xl transition shadow-lg shadow-sky-500/20">
+                Inquire License
+            </button>
+        </div>
+    </section>
+
+    <section id="roadmap" class="max-w-5xl mx-auto px-6 py-24 border-t border-slate-800/60">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl font-bold mb-3">Development Roadmap</h2>
+            <p class="text-slate-400">Structured phases from brand genesis to full institutional rollout.</p>
+        </div>
+        <div class="space-y-6">
+            <div class="bg-cardbg p-6 rounded-2xl border border-slate-800 flex items-center justify-between">
+                <div>
+                    <span class="text-xs font-mono text-accent uppercase tracking-wider block mb-1">Current Milestone</span>
+                    <h4 class="text-lg font-semibold">Phase 0.5: Brand Genesis & Public Surface</h4>
+                </div>
+                <span class="px-3 py-1 rounded-full bg-sky-500/10 text-sky-400 text-xs font-mono">Active</span>
+            </div>
+            <div class="bg-cardbg p-6 rounded-2xl border border-slate-800/60 flex items-center justify-between opacity-80">
+                <div>
+                    <span class="text-xs font-mono text-slate-400 uppercase tracking-wider block mb-1">Next Milestone</span>
+                    <h4 class="text-lg font-semibold">Phase 0: Web Container Setup & Dev Rig Parity</h4>
+                </div>
+                <span class="px-3 py-1 rounded-full bg-slate-800 text-slate-400 text-xs font-mono">Queued</span>
+            </div>
+            <div class="bg-cardbg p-6 rounded-2xl border border-slate-800/60 flex items-center justify-between opacity-60">
+                <div>
+                    <span class="text-xs font-mono text-slate-400 uppercase tracking-wider block mb-1">Future Milestone</span>
+                    <h4 class="text-lg font-semibold">Phase 1: Core Database Collections & Authentication</h4>
+                </div>
+                <span class="px-3 py-1 rounded-full bg-slate-800 text-slate-400 text-xs font-mono">Planned</span>
+            </div>
+        </div>
+    </section>
+
+    <footer class="border-t border-slate-800 py-12 text-center text-slate-500 text-sm">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center space-x-2">
+                <span class="font-bold text-slate-300">AcademiqOS</span>
+                <span>&copy; 2026. All rights reserved.</span>
+            </div>
+            <div class="text-xs text-slate-400">
+                Founder Contact: <span class="font-mono text-accent select-all">chowdhryshivan@gmail.com</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal Popup -->
+    <div id="modal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm hidden items-center justify-center z-50 px-4">
+        <div class="bg-cardbg border border-slate-700 p-8 rounded-3xl max-w-md w-full shadow-2xl relative text-center">
+            <div class="w-12 h-12 rounded-2xl bg-accent/10 text-accent flex items-center justify-center font-bold mx-auto mb-4 text-xl">i</div>
+            <h3 class="text-xl font-bold mb-3 text-slate-100">Notice</h3>
+            <p class="text-slate-300 text-sm mb-6 leading-relaxed">
+                This project is in initial planning stage. Thank you for showing your interest. For more details contact <span class="text-accent select-all font-mono">chowdhryshivan@gmail.com</span>
+            </p>
+            <button onclick="closeModal()" class="w-full bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold py-3 rounded-xl transition border border-slate-700">
+                Close
+            </button>
+        </div>
+    </div>
+
+    <script>
+        function openModal() {
+            document.getElementById('modal').classList.remove('hidden');
+            document.getElementById('modal').classList.add('flex');
+        }
+        function closeModal() {
+            document.getElementById('modal').classList.remove('flex');
+            document.getElementById('modal').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
